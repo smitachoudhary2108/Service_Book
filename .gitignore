@@ -1,30 +1,28 @@
-# Node
+# Node.js
 node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
 
 # Python
 __pycache__/
 *.pyc
 
-# macOS
-.DS_Store
+# VSCode
+.vscode/
 
-# Windows
+# OS generated files
+.DS_Store
 Thumbs.db
 
 # Logs
 *.log
 
-# Environment
-.env
-.env.*
-
-# VSCode
-.vscode/
-
-# Build
-/dist/
-/build/
-
-# Others
+# Editor swap files
 *.swp
 *.swo
