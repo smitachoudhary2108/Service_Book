@@ -1,14 +1,14 @@
 import DashboardLayout from "../components/layouts/DashboardLayout";
-import { useAuth } from "../context/AuthContext";
+// import { useAuth } from "../context/AuthContext";
 
 export default function Dashboard() {
-  const { user } = useAuth();
+//   const { user } = useAuth();
 
   return (
-    <DashboardLayout>
+    // <DashboardLayout>
       <div className="text-gray-700 text-lg">
-    Hello {user.name}, welcome to your {user.role} dashboard!
+    {/* Hello {user.name}, welcome to your {user.role} dashboard! */}
       </div>
-    </DashboardLayout>
+    // </DashboardLayout>
   );
 }

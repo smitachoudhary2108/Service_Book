@@ -9,10 +9,10 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) setUser(JSON.parse(storedUser));
-  }, []);
+ useEffect(() => {
+  const storedUser = localStorage.getItem("user");
+  if (storedUser) setUser(JSON.parse(storedUser));
+}, []);
 
   const login = async (credentials) => {
     try {
@@ -31,6 +31,10 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("user", JSON.stringify(data.user));
       setUser(data.user);
       toast.success("Login successful");
+      login(data.user, data.token); // Store user + token
+      
+localStorage.setItem("user", JSON.stringify(user)); // persist use
+
       navigate("/dashboard");
     } catch (err) {
       toast.error("Login error");
